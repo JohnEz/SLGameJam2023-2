@@ -11,6 +11,12 @@ public class Moveable : MonoBehaviour
     private Vector2 Velocity;
     public Vector2 Force { get; set; }
     //public Vector3 Facing { get; set; }
+    private Rigidbody2D Rigidbody2D;
+
+    private void Start() {
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
 
     void Update()
     {
@@ -21,7 +27,8 @@ public class Moveable : MonoBehaviour
             if (Mathf.Abs(Velocity.y) > MAX_SPEED) Velocity.y = MAX_SPEED * Mathf.Sign(Velocity.y);
         }
         if (Velocity != Vector2.zero) {
-            transform.position +=  Time.deltaTime * new Vector3(Velocity.x, Velocity.y);
+            var PosInc = Time.deltaTime * new Vector3(Velocity.x, Velocity.y);
+            Rigidbody2D.MovePosition(transform.position + PosInc);
         }
 
         /*
