@@ -35,12 +35,10 @@ public class FlyingEntity : MonoBehaviour {
         }
 
         PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-        if (!player) {
+        if (player) {
+            OnHitPlayer(player);
             return;
         }
-
-        OnHitPlayer(player);
     }
 
     protected virtual void OnHitPlayer(PlayerController player) {
