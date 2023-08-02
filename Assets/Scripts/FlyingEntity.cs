@@ -12,21 +12,21 @@ public class FlyingEntity : MonoBehaviour {
 
     private float moveSpeed;
 
-    [SerializeField, Range(-10f, 10f)]
-    private float killY = 10f;
+    private Vector3 heading;
 
     public void Start() {
         moveSpeed = Random.Range(moveSpeedRangeMin, moveSpeedRangeMax);
+        heading = new Vector3(
+            Random.Range(-0.5f, 0.5f),
+            1,
+            0
+        );
     }
 
     public void Update() {
-        Vector3 movement = new Vector3(0, 1, 0) * moveSpeed * Time.deltaTime;
+        Vector3 movement = heading * moveSpeed * Time.deltaTime;
 
         transform.position += movement;
-
-        if (transform.position.y >= killY) {
-            Destroy(gameObject);
-        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision) {
@@ -39,6 +39,11 @@ public class FlyingEntity : MonoBehaviour {
             OnHitPlayer(player);
             return;
         }
+
+        if (collision.gameObject.tag == "TopWall") {
+            Destroy(gameObject);
+        }
+
     }
 
     protected virtual void OnHitPlayer(PlayerController player) {
