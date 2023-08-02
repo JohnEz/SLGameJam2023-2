@@ -10,14 +10,18 @@ public class FlyingEntity : MonoBehaviour {
     [SerializeField, Range(.1f, 20f)]
     private float moveSpeedRangeMax = 5f;
 
+    [SerializeField]
+    private bool randomDirection = true;
+
     private float moveSpeed;
 
     private Vector3 heading;
 
     public void Start() {
         moveSpeed = Random.Range(moveSpeedRangeMin, moveSpeedRangeMax);
+
         heading = new Vector3(
-            Random.Range(-0.5f, 0.5f),
+            randomDirection ? Random.Range(-0.5f, 0.5f) : 0,
             1,
             0
         );
@@ -43,7 +47,6 @@ public class FlyingEntity : MonoBehaviour {
         if (collision.gameObject.tag == "TopWall") {
             Destroy(gameObject);
         }
-
     }
 
     protected virtual void OnHitPlayer(PlayerController player) {
