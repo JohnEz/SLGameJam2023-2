@@ -11,6 +11,7 @@ public class Moveable : MonoBehaviour {
 
     //public Vector3 Facing { get; set; }
     private Rigidbody2D Rigidbody2D;
+
     [SerializeField]
     private float REV_GRAVITY = 0.005f;
 
@@ -25,10 +26,10 @@ public class Moveable : MonoBehaviour {
                 ForceMode2D.Impulse
             );
         }
-        Rigidbody2D.AddForce(
-            new Vector2(0f, REV_GRAVITY),
-            ForceMode2D.Impulse
-        );
+        //Rigidbody2D.AddForce(
+        //    new Vector2(0f, REV_GRAVITY),
+        //    ForceMode2D.Impulse
+        //);
 
         /*
         graphics.rotation = Quaternion.Euler(

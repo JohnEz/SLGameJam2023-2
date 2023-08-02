@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FlyingEntity : MonoBehaviour {
 
-    [SerializeField, Range(.1f, 10f)]
+    [SerializeField, Range(.1f, 20f)]
     private float moveSpeedRangeMin = 0.5f;
 
-    [SerializeField, Range(.1f, 10f)]
+    [SerializeField, Range(.1f, 20f)]
     private float moveSpeedRangeMax = 5f;
 
     private float moveSpeed;
