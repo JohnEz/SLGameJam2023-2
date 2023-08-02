@@ -27,4 +27,9 @@ public class PlayerController : MonoBehaviour {
         //var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePos);
         //Moveable.Facing = mouseWorldPosition;
     }
+
+    public void OnDeath() {
+        Moveable.Force = Vector2.zero;
+        animationController.OnDeath();
+    }
 }

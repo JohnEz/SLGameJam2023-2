@@ -20,4 +20,8 @@ public class PlayerAnimationController : MonoBehaviour {
         animator.SetBool("SlowPressed", isUpPressed);
         animator.SetBool("FastPressed", isDownPressed);
     }
+
+    public void OnDeath() {
+        animator.SetTrigger("Death");
+    }
 }

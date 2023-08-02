@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ACCEL: 0.1
-  MAX_SPEED: 13
+  REV_GRAVITY: 0.005
 --- !u!114 &6237352869087193518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10cb91f3771d07c4fbf098a6a2847319, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74fd5a247e8d480429a4d8fa32c8b98d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
