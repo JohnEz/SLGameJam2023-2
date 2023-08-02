@@ -1427,6 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsGameOver: 0
   _onDefeatSFX: {fileID: 8300000, guid: deef63cc482d2e74bbb68eae96b79bfc, type: 3}
+  musicGo: {fileID: 1911388503}
 --- !u!1001 &4404238314907960836
 PrefabInstance:
   m_ObjectHideFlags: 0
