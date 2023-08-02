@@ -8,6 +8,9 @@ public class GameManager : Singleton<GameManager> {
     [SerializeField]
     public AudioClip _onDefeatSFX;
 
+    [SerializeField]
+    private GameObject musicGo;
+
     private void Start() {
         IsGameOver = false;
     }
@@ -20,6 +23,11 @@ public class GameManager : Singleton<GameManager> {
 
     public void GameOver() {
         IsGameOver = true;
+
+        if (musicGo) {
+            Destroy(musicGo);
+        }
+
         AudioManager.Instance.PlaySound(_onDefeatSFX, Vector3.zero);
 
         // stop scorer
