@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private const float SPAWN_PERIOD = 5.0f;
+    [SerializeField] private float SPAWN_PERIOD = 5.0f;
     [SerializeField] private GameObject spawnPrefab;
 
-    private float cooldown = SPAWN_PERIOD;
+    private float cooldown;
+
+    void Start() {
+        cooldown = SPAWN_PERIOD;
+    }
 
     void Update() {
         cooldown -= Time.deltaTime;
