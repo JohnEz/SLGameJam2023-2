@@ -19,7 +19,8 @@ public class Spawner : MonoBehaviour
         cooldown = SPAWN_PERIOD;
 
         var spawnPos = transform.position;
-        spawnPos.x = Random.Range(-6, 6);
+        const float width = 5.5f; // tuck in boys
+        spawnPos.x = Random.Range(-width, width);
 
         GameObject newAI = Instantiate(spawnPrefab);
 
