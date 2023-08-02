@@ -34,7 +34,7 @@ public class FlyingEntity : MonoBehaviour {
         Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public void Update() {
+    public void FixedUpdate() {
         Vector3 movement = heading * moveSpeed * Time.deltaTime;
 
         if (obeyPhysics) {

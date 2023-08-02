@@ -15,7 +15,7 @@ public class Moveable : MonoBehaviour {
         Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         if (Force != Vector2.zero) {
             Rigidbody2D.MovePosition((Vector2)transform.position + Force * ACCEL);
         }
