@@ -63,7 +63,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ACCEL: 0.1
-  REV_GRAVITY: 0.005
 --- !u!114 &6237352869087193518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +133,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.55
+  m_Radius: 0.5
 --- !u!1 &7682365178311718443
 GameObject:
   m_ObjectHideFlags: 0
