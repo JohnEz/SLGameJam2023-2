@@ -5,16 +5,14 @@ using UnityEngine;
 public class Moveable : MonoBehaviour {
 
     [SerializeField]
-    private float ACCEL = 0.1f;
+    private float ACCEL = 20.0f;
 
-    [SerializeField]
-    private float MAX_SPEED = 13.0f;
-
-    private Vector2 Velocity;
     public Vector2 Force { get; set; }
 
     //public Vector3 Facing { get; set; }
     private Rigidbody2D Rigidbody2D;
+    [SerializeField]
+    private float REV_GRAVITY = 0.005f;
 
     private void Start() {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,15 +20,15 @@ public class Moveable : MonoBehaviour {
 
     private void Update() {
         if (Force != Vector2.zero) {
-            Velocity += Force * ACCEL;
-
-            if (Mathf.Abs(Velocity.x) > MAX_SPEED) Velocity.x = MAX_SPEED * Mathf.Sign(Velocity.x);
-            if (Mathf.Abs(Velocity.y) > MAX_SPEED) Velocity.y = MAX_SPEED * Mathf.Sign(Velocity.y);
+            Rigidbody2D.AddForce(
+                Force * ACCEL,
+                ForceMode2D.Impulse
+            );
         }
-        if (Velocity != Vector2.zero) {
-            Vector3 newPosition = Rigidbody2D.position + (new Vector2(Velocity.x, Velocity.y) * Time.fixedDeltaTime);
-            Rigidbody2D.MovePosition(newPosition);
-        }
+        Rigidbody2D.AddForce(
+            new Vector2(0f, REV_GRAVITY),
+            ForceMode2D.Impulse
+        );
 
         /*
         graphics.rotation = Quaternion.Euler(
