@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void Update() {
+        if (GameManager.Instance.IsGameOver) {
+            return;
+        }
+
         var moveX = Input.GetAxisRaw("Horizontal");
         var moveY = Input.GetAxisRaw("Vertical");
 
