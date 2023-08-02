@@ -13,9 +13,14 @@ public class FlyingEntity : MonoBehaviour {
     [SerializeField]
     private bool randomDirection = true;
 
+    [SerializeField]
+    private bool obeyPhysics = true;
+
     private float moveSpeed;
 
     private Vector3 heading;
+
+    private Rigidbody2D Rigidbody2D;
 
     public void Start() {
         moveSpeed = Random.Range(moveSpeedRangeMin, moveSpeedRangeMax);
@@ -25,12 +30,18 @@ public class FlyingEntity : MonoBehaviour {
             1,
             0
         );
+
+        Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     public void Update() {
         Vector3 movement = heading * moveSpeed * Time.deltaTime;
 
-        transform.position += movement;
+        if (obeyPhysics) {
+            Rigidbody2D.MovePosition(transform.position + movement); //Force * ACCEL);
+        } else {
+            transform.position += movement;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision) {
@@ -45,7 +56,8 @@ public class FlyingEntity : MonoBehaviour {
         }
 
         if (collision.gameObject.tag == "TopWall") {
-            Destroy(gameObject);
+            // stack up
+            //Destroy(gameObject);
         }
     }
 

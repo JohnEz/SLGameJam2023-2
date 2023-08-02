@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aea7091680aeec41a92f6900e04adf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SPAWN_PERIOD: 0.2
+  SPAWN_PERIOD: 0.4
   spawnPrefab: {fileID: 3705303089620042678, guid: 4d3c751e653ffa74db2f79ea0c169576, type: 3}
   WALL_SPAWN_PERIOD: 6
   wallPrefab: {fileID: 3705303089620042678, guid: eba4591fd72ca464f8274b3ddaa071c1, type: 3}
   warningPrefab: {fileID: 6297404148568676770, guid: 09261efaeba477c42894ebb9b7e1aa0f, type: 3}
+  WARNING_TIME: 2
