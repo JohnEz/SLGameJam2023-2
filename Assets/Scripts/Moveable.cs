@@ -2,14 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moveable : MonoBehaviour
-{
+public class Moveable : MonoBehaviour {
+
     [SerializeField]
     private float ACCEL = 0.1f;
+
     [SerializeField]
     private float MAX_SPEED = 13.0f;
+
     private Vector2 Velocity;
     public Vector2 Force { get; set; }
+
     //public Vector3 Facing { get; set; }
     private Rigidbody2D Rigidbody2D;
 
@@ -17,9 +20,7 @@ public class Moveable : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-
-    void Update()
-    {
+    private void Update() {
         if (Force != Vector2.zero) {
             Velocity += Force * ACCEL;
 
@@ -27,8 +28,8 @@ public class Moveable : MonoBehaviour
             if (Mathf.Abs(Velocity.y) > MAX_SPEED) Velocity.y = MAX_SPEED * Mathf.Sign(Velocity.y);
         }
         if (Velocity != Vector2.zero) {
-            var PosInc = Time.deltaTime * new Vector3(Velocity.x, Velocity.y);
-            Rigidbody2D.MovePosition(transform.position + PosInc);
+            Vector3 newPosition = Rigidbody2D.position + (new Vector2(Velocity.x, Velocity.y) * Time.fixedDeltaTime);
+            Rigidbody2D.MovePosition(newPosition);
         }
 
         /*
