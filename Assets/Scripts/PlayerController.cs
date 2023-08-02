@@ -22,10 +22,6 @@ public class PlayerController : MonoBehaviour {
         var movementInput = new Vector2(moveX, moveY).normalized;
         Moveable.Force = movementInput;
         animationController.MoveInput = movementInput;
-
-        //var mousePos = Input.mousePosition;
-        //var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-        //Moveable.Facing = mouseWorldPosition;
     }
 
     public void OnDeath() {
