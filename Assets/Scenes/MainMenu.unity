@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Humpty Dumpty
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd0e6dba533200342a81fcdaaac0daf7, type: 2}
+  m_sharedMaterial: {fileID: 4299212991460938285, guid: dd0e6dba533200342a81fcdaaac0daf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -208,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 98
-  m_fontSizeBase: 98
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -318,8 +318,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: THE FALL
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd0e6dba533200342a81fcdaaac0daf7, type: 2}
+  m_sharedMaterial: {fileID: 4299212991460938285, guid: dd0e6dba533200342a81fcdaaac0daf7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -542,25 +542,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1435382231}
     m_Modifications:
     - target: {fileID: 9023285591730143265, guid: ca455becd5a006e4abcb85be80eb649a, type: 3}
-      propertyPath: m_fontSize
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023285591730143265, guid: ca455becd5a006e4abcb85be80eb649a, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 9023285591730143265, guid: ca455becd5a006e4abcb85be80eb649a, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023285591730143265, guid: ca455becd5a006e4abcb85be80eb649a, type: 3}
       propertyPath: m_fontSizeBase
       value: 64
       objectReference: {fileID: 0}
-    - target: {fileID: 9023285591730143265, guid: ca455becd5a006e4abcb85be80eb649a, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
     - target: {fileID: 9023285591730143266, guid: ca455becd5a006e4abcb85be80eb649a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 200
