@@ -17,11 +17,10 @@ public class PlayerController : MonoBehaviour
         var moveY = Input.GetAxisRaw("Vertical");
 
         var movementInput = new Vector2(moveX, moveY).normalized;
+        Moveable.Force = movementInput;
 
-        var mousePos = Input.mousePosition;
-        var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePos);
-
-        Moveable.MovementDirection = movementInput;
-        Moveable.Facing = mouseWorldPosition;
+        //var mousePos = Input.mousePosition;
+        //var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        //Moveable.Facing = mouseWorldPosition;
     }
 }
