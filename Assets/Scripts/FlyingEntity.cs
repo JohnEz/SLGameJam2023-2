@@ -12,6 +12,9 @@ public class FlyingEntity : MonoBehaviour {
 
     private float moveSpeed;
 
+    [SerializeField, Range(-10f, 10f)]
+    private float killY = 10f;
+
     public void Start() {
         moveSpeed = Random.Range(moveSpeedRangeMin, moveSpeedRangeMax);
     }
@@ -20,5 +23,9 @@ public class FlyingEntity : MonoBehaviour {
         Vector3 movement = new Vector3(0, 1, 0) * moveSpeed * Time.deltaTime;
 
         transform.position += movement;
+
+        if (transform.position.y >= killY) {
+            Destroy(gameObject);
+        }
     }
 }
