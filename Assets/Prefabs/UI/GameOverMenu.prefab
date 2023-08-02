@@ -415,6 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4404238316309463952}
   - component: {fileID: 4404238316309463953}
+  - component: {fileID: 3226499381044947942}
   m_Layer: 5
   m_Name: GameOverMenu
   m_TagString: Untagged
@@ -454,10 +455,24 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4404238316309463959}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &3226499381044947942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4404238316309463959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adacb944244ece4d829acacc9beee62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 4404238315489018991}
+  canvasGroup: {fileID: 4404238316309463953}
 --- !u!1001 &4404238315269668566
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -22,6 +22,6 @@ public class GameManager : Singleton<GameManager> {
         ScoreManager.Instance.StopScore();
 
         // show game over screen
-        CanvasManager.Instance.ShowGameOver();
+        GameOverMenu.Instance.Show();
     }
 }
